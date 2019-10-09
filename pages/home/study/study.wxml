@@ -1,0 +1,46 @@
+    <view class="banner">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}"indicator-color="{{indicatorColor}}" indicator-active-color="#41a0f7" >
+         <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item>
+               <image style="width:100%"  src="{{item}}"></image>
+          </swiper-item> 
+        </block>
+    </swiper>
+  </view>
+      <view class="school clear">
+        <i-row>
+          <i-col span="21" i-class="col-class">
+          <view class="leftfont"> 
+          <view class="schoolleft">成人大学 （ 本科学历 ）</view>  
+          <view class="schoolprice">￥3588.00<text style="text-decoration:line-through;color: #999999;margin-left:10px">￥6888.00 </text></view>  
+          <view>深圳</view>  
+          </view>
+         
+          </i-col>
+          <i-col span="3" i-class="col-class">
+          <view class="rigthfont">
+             <view><image src="/static/image/分享 (2).png"></image> </view>
+              <view>分享</view>
+          </view>
+         
+          </i-col>
+      </i-row>
+    </view>
+
+
+    <view class="details">
+      <i-row>
+          <i-col span="9" i-class="col-class">
+          <image  class="line" src="/static/image/line1.png"></image>
+          </i-col>
+          <i-col span="6" i-class="col-class">
+            <view class="textli">详情描述</view> 
+          </i-col>
+          <i-col span="9" i-class="col-class">
+          <image src="/static/image/line.png"></image>
+          </i-col>
+      </i-row>
+      </view>
+
+
+  <view class="paybottom" bindtap="pay">支付订金 ￥500.00</view>

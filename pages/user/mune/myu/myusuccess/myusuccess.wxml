@@ -1,0 +1,12 @@
+
+
+
+<view class="hearder">
+<view> <image src="/static/image/形状 1.png"></image></view>
+<view class="successmsg" >恭喜您已申请U积分提现成功!</view>
+<view class="successcont"><text> 请您耐心等候平台客服审核 \n 审核通过后将通过微信支付发放到您的微信账户上 !</text> </view>
+<view class="enrolled" bindtap="toenrolled">
+  返回
+</view>
+</view>
+

@@ -1,0 +1,75 @@
+/* pages/user/mune/redeem/redeem.wxss */
+
+.ucolor{
+  color: #3d94f3;
+  font-size: 14px;
+  font-weight: 500;
+  }
+  .myintegral{
+    font-size: 15px;
+    font-weight: 600;
+    height: 20px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+     padding-bottom: 20px;
+      border-bottom: 3px solid #f8f8f8;
+    }
+  .verify{
+    width: 95% ;
+    margin: 0 auto;
+  }
+  .contentlist image{
+    width: 90%;
+    height: 120px
+  }
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;text-align: left;
+  }
+  .contentlist{
+    width: 50%
+  }
+  .content view{
+    margin-top: 5px
+  }
+  .content text{
+    color: white;
+    padding: 2px 20px 2px 20px;
+    background-color: #3d94f3;
+    border-radius: 8px;
+    margin-left: 15px
+  }
+ .modelmsg{
+   padding: 20px
+ }
+ .rigthcont{
+   float: right;
+  text-align: right;
+ }
+ .leftcont{
+   float: left;
+   text-align: left;
+   }
+.mycont{
+  font-size: 14px;
+  margin-top: 20px;
+  color: #b8b8b8;
+  border-bottom: 2px solid #f8f8f8;
+  height: 110px;
+}
+.mycont view{
+  margin-top: 10px
+}
+.fonta{
+  color: black ;
+  font-weight: 600;
+
+}
+.fontu{
+  color: #3078fe;
+}
+.fontc{
+  color: #16d324
+  }

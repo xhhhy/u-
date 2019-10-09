@@ -1,0 +1,13 @@
+<view class="hearder">
+  <view class="heard">
+      <image src="/static/image/11.png"></image>
+  </view>
+  <view class="form">
+       <input  class="searchinput" value="{{ value }}"  autofocus placeholder="请输入企业名称" />
+       <input  class="searchinput" value="{{ value }}"  autofocus placeholder="点击选择企业区域" />
+       <input  class="searchinput" value="{{ value }}"  autofocus placeholder="请输入企业联系人" />
+       <input  class="searchinput" value="{{ value }}"  autofocus placeholder="请输入联系人手机号" />
+       <view class="message">注：提供虚假信息者，平台将进行封号处理。</view>
+       <view class="tijiao" bindtap="submit">提交审核 </view>
+  </view> 
+</view>

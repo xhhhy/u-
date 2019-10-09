@@ -1,0 +1,32 @@
+<!--pages/user/mune/myu/myu.wxml-->
+<view class="content">
+  <view class="heard">
+        <view class="herdcont">
+         <i-row>
+          <i-col span="16" i-class="col-class">
+          <view class="leftnum">
+           <view class="num">200</view>
+            <view>我的U积分</view>
+          </view>
+               </i-col>
+          <i-col span="8" i-class="col-class"><view class="money" bindtap="money">提现</view></i-col>
+      </i-row>
+        </view>
+  </view>
+</view>
+<view class="msg"> <text style=" height: 20px;border-left: 3px solid #3d94f3;isplay:inline-block;margin-right:10px "></text>U积分记录</view>
+    <view class="footer">
+    <i-row  i-class="row" wx:for="{{list}}" wx:key="{{index}}">
+          <i-col span="16" i-class="col-class">
+              <view style="color:#bfbfbf">{{item.time}}</view>
+              <view>{{item.name}}</view>
+          </i-col>
+          <i-col span="8" i-class="col-class">
+          <view class="righttext">
+                        <view class="{{item.color==true?'moneya':'moneyb'}}">{{item.state}}</view>
+                        <view class="{{item.nummoney==true?'moneya':'moneyc'}}">{{item.money}}</view>
+              <view></view>
+          </view>
+          </i-col>
+      </i-row>
+      </view>

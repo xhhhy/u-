@@ -1,0 +1,14 @@
+
+
+<view class="hearder">
+<view> <image src="/static/image/形状 1.png"></image></view>
+<view class="successmsg" >恭喜你成功报名!</view>
+<view class="successcont">请您耐心等待后台客服审核，留意平台面试通知</view>
+</view>
+<view class="content">
+  <view class="contenttop" >注意事项</view>
+  <view>前往面试时，请携带您本人身份证,前往面试时，请携带您本人身份证xxxxxxxxxxxxxxxxxxxx</view>
+</view> 
+<view class="enrolled" bindtap="toenrolled">
+查看已报名岗位 
+</view>

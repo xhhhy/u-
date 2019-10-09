@@ -1,0 +1,17 @@
+<view class="msg">
+  <text style=" height: 20px;border-left: 3px solid #3d94f3;isplay:inline-block;margin-right:10px "></text>我的U积分</view>
+<view class="msg">
+  <text style=" height: 20px;border-left: 3px solid #3d94f3;isplay:inline-block;margin-right:10px "></text>U积分提现</view>
+  <view class="content">
+      <view class="alltime clearfloat">
+        <view class="changetime" wx:for='{{date}}' wx:for-index="index" wx:key="index" wx:for-item="item" style='{{key==index?"background-color: #3f9cf8;color:#fff":""}}' bindtap='changColor' data-index='{{index}}'> <text> {{item.price}}元 \n {{item.u}}U积分</text>
+        </view>
+      </view>
+      <view class="contfoot">
+          <i-row>
+              <i-col span="20" i-class="col-class">需消耗U积分 :</i-col>
+              <i-col span="4" style="color:#3d94f3" i-class="col-class">100.00</i-col>
+          </i-row>
+      </view> 
+      <view class="tijiao" bindtap="submit">立即提现</view>
+  </view>

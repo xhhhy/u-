@@ -1,0 +1,9 @@
+
+<view class="hearder">
+<view> <image src="/static/image/形状 1.png"></image></view>
+<view class="successmsg" >恭喜您已提供职位信息成功! </view>
+<view class="successcont">请您耐心等候，平台客服核实无误即可获得奖励！ !</view>
+</view>
+<view class="enrolled" bindtap="myorder">
+查看我的职位信息
+</view>

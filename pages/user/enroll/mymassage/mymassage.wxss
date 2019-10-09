@@ -1,0 +1,37 @@
+/* pages/user/enroll/mymassage/mymassage.wxss */
+.enrolllist{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 500;
+  border-bottom: 2px solid #f8f8f8;
+  color: #d3d3d3
+}
+.leftlist{
+  text-align: left;
+  padding-left: 5px;
+}
+.rightlist{
+  text-align: right;
+  padding-right: 5px;
+}
+.leftname{
+  font-size: 14px;
+  font-weight: 550;
+  color: black;
+}
+.rightmsg{
+  color: #ffd7aa;
+  }
+  .colorb{
+    color: #ffa200
+  }
+  .colorc{
+    color: #1acc51
+  }
+.colord{
+    color: #ea1212
+  }

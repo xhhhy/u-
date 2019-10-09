@@ -1,0 +1,47 @@
+
+<view class="content">
+<view class="top">
+  <view class="user"><image src="/static/image/4.png"></image></view>
+  <view  class="userid">
+    <view class="username">LUTHI</view>
+    <view class="userlv">ID:100020  |  青铜达人
+  </view>
+  </view>
+</view>
+<view class="jifen">
+<i-row>
+    <i-col span="8" i-class="col-class"><view >10000.00</view><view class="jifennum">锁定积分</view></i-col>
+    <i-col span="8" i-class="col-class"><view  >10000.00</view><view class="jifennum">我的U积分</view></i-col>
+    <i-col span="8" i-class="col-class"><view  >10000.00</view><view class="jifennum">已提现积分</view></i-col>
+</i-row>
+</view>
+</view>
+<view class="listcontent">
+    <view class="list" bindtap="reenroll" wx:for="{{mune}}" wx:key="{{index}}" id="{{item.address}}"><view> <image src="{{item.image}}"></image> </view> <view> {{item.name}}</view> 
+    </view>
+</view>
+
+<view class="mianshi">
+  <image src="/static/image/5.png"></image>
+</view>
+
+<view class="bottom">
+
+<view class="bottomlist" wx:for="{{options}}" wx:key="{{index}}" bindtap="remune" id="{{item.address}}">
+  <i-row>
+    <i-col span="2" i-class="col-class"><view class="bottomlink"><image src="{{item.image}}"></image></view></i-col>
+    <i-col span="18" i-class="col-class"><view class="bottomfont" style="border-bottom: 2px solid #f8f8f8; padding-bottom: 10px;">{{item.name}}</view></i-col>
+    <i-col span="4" i-class="col-class"><view style="border-bottom: 2px solid #f8f8f8; padding-bottom: 4px;  text-align: left"> <i-icon type="enter" size="23" /></view></i-col>
+</i-row>
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+/* pages/user/mune/help/help.wxss */
+.helpcontent{
+  font-size: 13px;
+}
+.msg{
+  margin:30px 20px 30px 0px;
+  font-weight: 550;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.feedback {
+  text-align: left;
+  padding: 20px 0px 20px 20px;
+  background-color: #f7f7f7;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.feedmsg{
+  font-size: 14px;
+  padding: 20px;
+  width: 85%;
+}
+
+
+

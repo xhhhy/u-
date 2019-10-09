@@ -1,0 +1,23 @@
+
+<view>
+<view class="msg"> <text style=" height: 20px;border-left: 3px solid #3d94f3;isplay:inline-block;margin-right:10px "></text>我的推荐人：<text>周杰伦</text></view>
+
+<view class="msg"> <text style=" height: 20px;border-left: 3px solid #3d94f3;isplay:inline-block;margin-right:10px "></text>我的直系达人：      <text> 25人</text></view>
+
+<view class="peoplelist">
+    <view class="list" wx:for="{{peoplelist}}" wx:key="{{index}}">
+      <i-row>
+      <i-col span="2" i-class="col-class">{{item.id}}</i-col>
+      <i-col span="4" i-class="col-class"><image src="{{item.image}}"></image></i-col>
+      <i-col span="5" i-class="col-class">{{item.name}}</i-col>
+      <i-col span="10" i-class="col-class"> <view class="phonecolor">{{item.phone}}</view></i-col>
+      <i-col span="2" i-class="col-class">{{item.num}}</i-col>
+      </i-row>
+    </view>
+</view>
+
+
+
+
+
+</view>

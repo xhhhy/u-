@@ -1,0 +1,10 @@
+
+
+<view class="hearder">
+<view> <image src="/static/image/形状 1.png"></image></view>
+<view class="successmsg" >恭喜您已申请报考成功! </view>
+<view class="successcont">我们客服人员将尽快与您联系，请您保持电话畅通！!</view>
+</view>
+<view class="enrolled" bindtap="tomyschool">
+查看我的订单
+</view>

@@ -1,0 +1,29 @@
+/* pages/list/contentmsg/contentmsg.wxss */
+.verify{
+  width: 90%;
+  margin: 20px  auto 10px;
+
+}
+.optiontime{
+  color: #999999;
+  font-size: 12px ;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  }
+  .optionmsg{
+    font-weight: 500;
+    font-size: 14px
+  }
+  .option{
+    margin-bottom: 25px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px
+  }
+  .content{
+    width: 90% ;
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2.5;
+  }

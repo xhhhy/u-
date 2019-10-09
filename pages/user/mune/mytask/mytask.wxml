@@ -1,0 +1,16 @@
+<!--pages/user/mune/mytask/mytask.wxml-->
+<view class="content">
+  <view class="hearder">
+    <image src="/static/image/完成.png"> </image>
+  </view>
+
+  <view class="options">
+  <view class="clear" wx:for="{{options}}" wx:key="{{index}}">
+    <view class="leftoption">
+    <view>{{item.name}} <text class="ucolor">+{{item.uid}}积分</text></view>
+    <view class="massage">{{item.msg}}</view>
+    </view>
+    <view class="rigthoption"><text style="color: #3e99f8;">1</text>/3<text class="{{item.sta==true?'success':'unsuccess'}}">{{item.state}}</text></view>
+  </view>
+  </view>
+</view>

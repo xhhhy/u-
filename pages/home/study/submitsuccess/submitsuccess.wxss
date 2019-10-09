@@ -1,0 +1,46 @@
+/* pages/home/study/submitsuccess/submitsuccess.wxss */
+/* pages/tijiao/success/success.wxss */
+
+.hearder image{
+        width: 70px;
+        height: 70px;
+}
+.hearder{
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 5px solid #f8f8f8;
+}
+.successmsg{
+  margin: 20px 0 15px 0 ;
+  color: #3d94f3;
+  font-size: 14px;
+  }
+  .successcont{
+    margin-bottom: 25px;
+    color: #a9a9a9;
+    font-size: 16px;
+  }
+.content{
+  width: 88%;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
+}
+.contenttop{
+  text-align: center;
+  margin: 20px 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  }
+  .enrolled{
+    font-size: 16px ;
+    color: white;
+    border-radius: 15px;
+    background-color: #3e9af8;
+    padding: 12px 0 12px 0;
+    text-align: center;
+    width: 240px;
+    margin: 100px auto 0; 
+  }

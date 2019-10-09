@@ -1,0 +1,43 @@
+<!--pages/user/mune/firends/firends.wxml-->
+<view class="body">
+<view class="content">
+    <view class="rule" bindtap="handleOpen">活动规则</view>
+    <view class="people">
+      <i-row>
+      <i-col span="12" i-class="col-class">
+        <view><text class="peoplefont">112</text>人</view>
+        <view >达人直系</view>
+      </i-col>
+      <i-col span="12" i-class="col-class">
+        <view><text class="peoplefont">112</text>人</view>
+        <view>直系下属</view>
+      </i-col>
+      </i-row>
+      <view class="mypeople" bindtap="mypeople">查看我的直系达人</view>
+    </view>
+
+</view>
+<view class="massage" hidden="{{visible}}">
+    <view class="msgcont">
+        <view class="close" bindtap="handleClose" >关闭</view>
+        <view class="titile">活动规则</view>
+        <view>1、每成功推荐一名达人直系，可获得U积分奖励；  </view>
+        <view> 2、达人直系完成任务或应聘职位，可获得相应奖励 </view>
+        <view>3、介绍介绍介绍介绍介绍介</view>
+    </view>
+  </view>
+  </view>
+    <view class="footer">
+    <i-row>
+      <i-col span="8" i-class="col-class">
+        <view><image src="/static/image/微信分享.png"></image></view>
+      </i-col>
+      <i-col span="8" i-class="col-class">
+        <view><image src="/static/image/复制链接.png"></image></view>
+      </i-col>
+      <i-col span="8" i-class="col-class">
+        <view><image src="/static/image/推广海报.png"></image></view>
+      </i-col>
+      </i-row>
+      <view class="footmsg">分享后引导好友绑定手机号码，可更快获得奖励哦！</view>
+    </view>

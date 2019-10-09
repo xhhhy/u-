@@ -1,0 +1,31 @@
+
+.verify{
+  width: 90%;
+  margin: 20px  auto 10px;
+
+}
+.optiontime{
+  color: #999999;
+  font-size: 12px ;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  }
+  .optionmsg{
+    font-weight: 500;
+    font-size: 14px
+  }
+  .option{
+    margin-bottom: 25px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px
+  }
+  .newmsgicon{
+    height: 5px;
+    width: 5px;
+    border-radius: 2.5px;
+    background-color: red;
+    position: relative;
+    top: 10px;
+    left: 140px
+  }

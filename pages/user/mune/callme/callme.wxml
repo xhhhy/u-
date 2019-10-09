@@ -1,0 +1,22 @@
+<view class="content">
+ 
+ <view class="hearder">
+ <image src="/static/image/矩形 2.png"></image>
+ </view>
+ <view class="online">
+    <i-row>
+        <i-col span="4" i-class="col-class"><image src="/static/image/微信.png"></image></i-col>
+        <i-col span="16" i-class="col-class col-classa">
+        <view>在线客服</view>
+        <view class="onlinefont">在线客服竭诚为您服务</view>
+        </i-col>
+        <i-col span="4" i-class="col-class col-classb"><i-icon type="enter" size="20" color="#000" /></i-col>
+    </i-row>
+ </view> 
+ <view class="footer">
+      <view>客服微信 </view>
+      <view class="onlinefont" style="margin-bottom: 10px" >识别二维码，添加官方客服微信</view>
+      <view> <image src="/static/image/18.png"></image>  </view>
+ </view> 
+
+</view>

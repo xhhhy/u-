@@ -1,0 +1,51 @@
+<!--pages/user/enroll/myenroll/myenroll.wxml-->
+<view>
+    <i-tabs current="{{ current }}"   bindchange="handleChange">
+    <i-tab key="tab1" title="我的报名">
+    </i-tab>
+    <i-tab key="tab2" title="我的面试">
+    </i-tab>
+    </i-tabs>
+</view>
+
+ <view class="verify" wx:if="{{current =='tab1'}}">
+  <view class="enrolllist" wx:for="{{options}}" wx:key="{{index}}">
+      <i-row>
+        <i-col span="12" i-class="col-class">
+        <view class="leftlist">
+          <view class="leftname">{{item.name}}  </view>
+          <view class="leftprice"> {{item.price}}/月</view>
+          <view> {{item.office}}</view>
+        </view>
+        </i-col>
+        <i-col span="12" i-class="col-class"><view class="rightlist">
+        <view bindtap="tomyorder"><i-icon type="enter" size="20" color="#000" /></view>
+          <view class="{{item.state==true?'rightmsg':'rightmsgoff'}}"> {{item.msg}}</view>
+          <view class="righttime">{{item.time}} </view>
+        </view>
+        </i-col>
+    </i-row>
+  </view>
+
+
+</view>
+ <view class="verify" wx:if="{{current =='tab2'}}">
+      <view class="enrolllist" wx:for="{{options1}}" wx:key="{{index}}">
+      <i-row>
+        <i-col span="12" i-class="col-class">
+        <view class="leftlist">
+          <view class="leftname">{{item.name}}  </view>
+          <view class="leftprice"> {{item.price}}/月</view>
+          <view> {{item.office}}</view>
+        </view>
+        </i-col>
+        <i-col span="12" i-class="col-class"><view class="rightlist">
+        <view><i-icon type="enter" size="20" color="#000" /></view>
+          <view class="color{{ item.id==0?'a':''||item.id==1?'b':''||item.id==2?'c':''||item.id==3?'d':''}}"> {{item.msg}}</view>
+          <view class="righttime">{{item.time}} </view>
+        </view>
+        </i-col>
+    </i-row>
+  </view>
+ 
+</view>

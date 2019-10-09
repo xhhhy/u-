@@ -1,0 +1,43 @@
+
+<i-tabs current="{{ current }}"   bindchange="handleChange">
+    <i-tab key="tab1" title="U积分兑换">
+    </i-tab>
+    <i-tab key="tab2" title="我的兑换">
+    </i-tab>
+</i-tabs>
+<view class="verify" wx:if="{{current =='tab1'}}">
+  <view class="myintegral"> <text style=" height: 20px;border-left: 3px solid #3d94f3;isplay:inline-block;margin-right:10px "></text>我的U积分 :<text class="ucolor"> 1000</text></view>
+  <view class="content">
+        <view class="contentlist" wx:for="{{uidlist}}" wx:key="{{index}}">
+        <view><image src="{{item.image}}"></image></view>
+        <view>{{item.name}}</view>
+        <view style="color:#3d94f3;">{{item.uj}} U积分 <text bindtap="ubuy">兑换</text></view>
+        </view> 
+  </view>
+</view>
+<i-modal visible="{{ visible }}" bind:ok="handleok" bind:cancel="handleClose">
+    <view class="modelmsg">你将使用20.00积分兑换爱奇艺会员（一个月）</view>
+</i-modal>
+
+
+<view class="verify" wx:if="{{current =='tab2'}}">
+  <view class="mycont">
+    <view class="leftcont">
+      <view class="fonta">爱奇艺视频会员 （1个月）</view>
+      <view class="fontu">20.00 U积分</view>
+      <view>激活码：</view>
+     </view>
+    <view class="rigthcont">
+      <view>2019/10/01 14:52</view>
+      <view class="fontc">兑换成功</view>
+      <view>4000-1344-1345-1311</view>
+    </view>
+  </view>
+
+</view>
+
+
+
+
+
+

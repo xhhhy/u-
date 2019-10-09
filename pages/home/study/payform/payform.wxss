@@ -1,0 +1,49 @@
+/* pages/home/study/payform/payform.wxss */
+.phone{
+  padding: 7px 15px;
+  font-size: 14px;
+  font-weight: 550;
+}
+.submitform{
+  width: 90%;margin: 25px auto;
+  border-bottom: 4px solid #f8f8f8;
+  padding-bottom: 35px;
+
+}
+
+.content{
+  width: 90%;margin: 10px auto;
+  line-height: 3;
+  font-size: 14px;
+  font-weight: 500;
+
+}
+.leftmasg{
+  padding-left: 15px;
+}
+.bottom{
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.bottomleft{
+  float: left;
+  width: 35%;
+  height: 50px;
+  background-color: #f6f6f6;
+  color: #838383;
+}
+.bottomright{
+  float: right;
+  width: 65%;
+  height: 50px;
+    background-color: #398efa;
+  color: white;
+}
+
+

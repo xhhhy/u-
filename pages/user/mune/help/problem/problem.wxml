@@ -1,0 +1,12 @@
+ <form bindsubmit="bindFormSubmit">
+<view class="content">
+<view>问题反馈</view>
+  <textarea  placeholder="请输入您的问题反馈，必要时请配合截图说明" name="textarea"></textarea>
+<view>上传截图</view>
+<view class="upload" bindtap="uploadimg">+</view>
+</view>
+<button  class="enrolled" form-type="submit">
+提交 
+</button>
+</form>
+

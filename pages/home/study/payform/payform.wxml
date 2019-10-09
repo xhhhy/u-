@@ -1,0 +1,29 @@
+
+    <view class="submitform">
+    <view class="phone">报考人姓名</view>
+    <i-input value="{{ value }}" placeholder="请输入收货人姓名" />
+    
+    <view class="phone">手机号码</view>
+    <i-input value="{{ num }}" placeholder="请输入收货人姓名" />
+    </view>
+    <view class="content">
+    <i-row>
+    <i-col span="16" i-class="col-class"><view class="leftmasg">订单编号</view></i-col>
+    <i-col span="8" i-class="col-class"><view style="text-align: right">12313131313</view></i-col>
+    </i-row>
+      <i-row>
+    <i-col span="16" i-class="col-class"><view class="leftmasg">订单时间</view></i-col>
+    <i-col span="8" i-class="col-class"><view style="text-align: right">2018/15/15 13:00</view></i-col>
+    </i-row>
+      <i-row>
+    <i-col span="16" i-class="col-class"><view class="leftmasg">需支付订金</view></i-col>
+    <i-col span="8" i-class="col-class"><view style="text-align: right;color:red; font-weight: 550;">123456</view></i-col>
+    </i-row>
+    </view>
+
+    
+<view class="bottom">
+  <view class="bottomleft">取消</view>
+  <view class="bottomright" bindtap="submit">微信支付>></view>
+</view>
+
