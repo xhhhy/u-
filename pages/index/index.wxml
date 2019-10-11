@@ -27,65 +27,31 @@
     </picker>
     </view>
     <view style=" border-bottom: 5px solid #f6f6f6;"> </view>
-  <view>
+  <view hidden="{{option==[]}}" wx:for="{{option}}" wx:key="index"  >
       <view class="massage"  bindtap="godetails">
         <view class="mascontent">
-
           <view class="clearfloat">
-            <view class="leftmsg masname">普工</view>
-            <view class="rightmsg masprice"> 400-5000/月</view>
+            <view class="leftmsg masname">{{item.business}}</view>
+            <view class="rightmsg masprice"> {{item.salary}}</view>
           </view>
-
-
           <view class="clearfloat">
             <view class="leftmsg">
-                  <view class="msgfuli" style="  display: inline-block">s123123</view>
-                  <view class="msgfuli" style="  display: inline-block">456789</view>
-
+                  <view class="msgfuli" style="  display: inline-block">{{item.remark}}</view>
             </view>
             <view class="rightmsg msgjifen"> 反2000积分</view>
           </view>
 
 
           <view class="clearfloat">
-            <view class="leftmsg msgoffice">深圳富士康有限公司</view>
-            <view class="rightmsg msgaddress"> 深圳福田区</view>
+            <view class="leftmsg msgoffice">{{item.address}}</view>
+            <view class="rightmsg msgaddress"> {{item.region}}</view>
           </view>
 
       </view>
       </view>
      <view style=" border-bottom: 5px solid #f6f6f6;"> </view>
   </view>
-   <view>
 
 
-      <view class="massage"  bindtap="godetails">
-        <view class="mascontent">
-
-          <view class="clearfloat">
-            <view class="leftmsg masname">普工</view>
-            <view class="rightmsg masprice"> 400-5000/月</view>
-          </view>
-
-
-          <view class="clearfloat">
-            <view class="leftmsg">
-                  <view class="msgfuli" style="  display: inline-block">s123123</view>
-                  <view class="msgfuli" style="  display: inline-block">456789</view>
-
-            </view>
-            <view class="rightmsg msgjifen"> 反2000积分</view>
-          </view>
-
-
-          <view class="clearfloat">
-            <view class="leftmsg msgoffice">深圳富士康有限公司</view>
-            <view class="rightmsg msgaddress"> 深圳福田区</view>
-          </view>
-
-      </view>
-      </view>
-     <view style=" border-bottom: 5px solid #f6f6f6;"> </view>
-  </view>
   </view>
 </view>

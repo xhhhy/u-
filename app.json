@@ -29,7 +29,9 @@
     "pages/home/study/myschool/myschool",
     "pages/lssue/lssuesuccess/lssuesuccess",
     "pages/user/mune/myu/money/money",
-    "pages/user/mune/myu/myusuccess/myusuccess"
+    "pages/user/mune/myu/myusuccess/myusuccess",
+    "pages/authorizetip/authorizetip"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,4 +1,4 @@
-const config = require('../config.js') //引入配置文件
+import config from "../config.js"
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -19,39 +19,37 @@ const numberToFixed = n => {
   return n
 }
 
-const baseUrl = config.getBaseUrl; //获取接口URL
+const baseUrl = "http://recruit-local.com" //获取接口URL
 const app = getApp();
 
 const request = (object) => {
+  wx.showLoading({
+    title: '加载中',
+  })
   let token,
-    authorization,
-    _header,
+  uid,
+  openid,
+    header,
     _success = object.success,
     hasTokenOnStorage = true
-
   try {
-    authorization = wx.getStorageSync('authorization');
-    hasTokenOnStorage = !!authorization
+    token = wx.getStorageSync('token');
+    openid = wx.getStorageSync('openid');
+    uid = wx.getStorageSync('uid');
   } catch (e) {
     hasTokenOnStorage = false
   }
-
-  if (!hasTokenOnStorage) return
-
-  _header = {
-    'accept': 'application/json',
-    Authorization: authorization
+  header = {
+    "Content-Type": "application/x-www-form-urlencoded",
+    'token': token,
+    'uid':uid,
+    'openid':openid
   }
-  object.header = object.header || _header
-
+  object.header = object.header || header
   object.success = res => {
-    token = res.header.authorization || res.header.Authorization
-    for (let i in res.header) {
-      console.log(i + " === " + res.header[i])
-    }
-    console.log("token:" + token)
-    token && wx.setStorageSync('authorization', token)
-    console.log("res.statusCode:::::" + res.statusCode)
+    token = res.header.token || res.header.token
+    token && wx.setStorageSync('token', token)
+   // console.log("res.statusCode:::::" + res.statusCode)
     if (res.statusCode == 401 || res.statusCode == 400) {
       wx.showModal({
         content: '登录信息已过期，请重新授权',
@@ -64,6 +62,9 @@ const request = (object) => {
         }
       })
     }
+    wx.hideLoading();
+    
+   // console.log(res)
 
     _success && _success(res)
   }

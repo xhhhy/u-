@@ -1,4 +1,4 @@
-//index.js
+const util = require('../../utils/util.js')
 //获取应用实例
 const app = getApp()
 
@@ -10,6 +10,7 @@ Page({
     index: 0,
     multiArray: [['深圳市', '河北市'], ['职位', '职位1', '职位2', ]],
     multiIndex: [0,  0],
+    option:[]
   },
   //事件处理函数
 
@@ -28,16 +29,30 @@ Page({
     })
   },
   search(){
-      wx.request({
-        url: 'testweichat-local.com/testPost.php',
-        data:{a:123,b:456},
-        method:Post,
-        success(res){
-            console.log(res)
-        }
-      })
+    console.log(util.request)
+    util.request({
+      url: util.baseUrl+"/testPost.php",
+      data:{a:123,b:123},
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+      }
+    })
   },
   onLoad: function () {
+    let that = this
+    util.request({
+      url: "http://recruit-local.com/index_weichat.php/Index/listPosition",
+      method: 'GET',
+      success: function (res) {
+        that.setData({
+          option: res.data
+        })
+        console.log(that.data.option)
+      }
+    })
+
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

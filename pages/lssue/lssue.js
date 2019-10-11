@@ -1,16 +1,37 @@
 // pages/lssue/lssue.js
+const util = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    image:"/static/image/11.png"
+    image:"/static/image/11.png",
+    region: ['', '', ''],
+    customItem: ''
   },
-  submit(){
-      wx.navigateTo({
-        url: './lssuesuccess/lssuesuccess',
-      })
+  formSubmit(e){
+    console.log(e.detail.value)
+        let formdata = e.detail.value
+        
+
+        util.request({
+          url: util.baseUrl + "/user.php/Recruitment/addRecruitment",
+          data: e.detail.value ,
+          method: 'POST',
+          success: function (res) {
+            console.log(res)
+          }
+        })
+      // wx.navigateTo({
+      //   url: './lssuesuccess/lssuesuccess',
+      // })
+  },
+  bindRegionChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
   },
   /**
    * 生命周期函数--监听页面加载
