@@ -40,7 +40,7 @@ const request = (object) => {
     hasTokenOnStorage = false
   }
   header = {
-    "Content-Type": "application/x-www-form-urlencoded",
+    "Content-Type": "application/json",
     'token': token,
     'uid':uid,
     'openid':openid

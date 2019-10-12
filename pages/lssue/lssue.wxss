@@ -12,7 +12,7 @@
 .form{
   position: absolute;
   top: 300px;
-  left: 15%;
+  left: 16%;
   width: 250px;
 }
 .searchinput{
@@ -36,10 +36,11 @@
   color: #acacac;
 }
 .tijiao{
-  background-color: #3e98f8;
+  background-image: linear-gradient( to right,#317afe, #419ff7);
   text-align: center;
   border-radius: 15px;
   color: white;
-  width: 80%;
-  margin: 15px auto
+  width: 85%;
+  margin: 15px 25px 10px 12%;
+  font-size: 15px
 }

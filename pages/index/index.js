@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    nomsg:true,
     imgUrls: ["/static/image/8.png", "/static/image/3.png", "/static/image/8.png"],
     indicatorDots:true,
     indicatorColor:"#fff",
@@ -23,7 +24,11 @@ Page({
   },
 
 
-  godetails(){
+  godetails(e){
+    console.log()
+    wx.setStorageSync("business", this.data.option[e.target.id])
+   
+
     wx.navigateTo({
       url: '../details/details',
     })
@@ -42,17 +47,21 @@ Page({
   onLoad: function () {
     let that = this
     util.request({
-      url: "http://recruit-local.com/index_weichat.php/Index/listPosition",
+      url: "http://recruit-local.com/index_weichat.php",
       method: 'GET',
       success: function (res) {
         that.setData({
           option: res.data
         })
         console.log(that.data.option)
+        if (that.data.option==[]){
+          that.setData({
+            nomsg: false
+          })
+
+        }
       }
     })
-
-
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

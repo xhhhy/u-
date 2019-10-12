@@ -125,5 +125,16 @@ height: 20px
 .msgaddress{
   color: #acacac;
   font-size: 11px
+}
+.nomsg{
+  width: 100% ;
+  height: 250px;
+    text-align: center;
+  color: #acacac;
+}
+.nomsg image{
+  width: 100%;
+  height: 250px;
+
 
 }

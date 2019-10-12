@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userimg:"",
     ads: "/static/image/23.png",
     mune: [{
       image: "/static/image/6.png",
@@ -94,7 +95,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+      let img =   wx.getStorageSync("userimg")
+        this.setData({
+          userimg: img
+        })
   },
 
   /**

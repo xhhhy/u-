@@ -1,7 +1,7 @@
 
 <view class="content">
 <view class="top">
-  <view class="user"><image src="/static/image/4.png"></image></view>
+  <view class="user"><image style="border-radius: 50%" src="{{userimg}}"></image></view>
   <view  class="userid">
     <view class="username">LUTHI</view>
     <view class="userlv">ID:100020  |  青铜达人

@@ -37,7 +37,7 @@
     font-size: 16px ;
     color: white;
     border-radius: 15px;
-    background-color: #3e9af8;
+    background-image: linear-gradient( to right,#317afe, #419ff7);
     padding: 12px 0 12px 0;
     text-align: center;
     width: 240px;

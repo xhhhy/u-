@@ -63,6 +63,7 @@ App({
                       wx.setStorageSync('token', res.data.token);
                       wx.setStorageSync('openid', res.data.openid);
                       wx.setStorageSync('uid', res.data.uid);
+                      wx.setStorageSync('userimg', that.globalData.userInfo.avatarUrl);
 
                     //  wx.setStorageSync('authorization', "Bearer " + authorizationValue);
                     //  that.globalData.userAuthorization = "Bearer " + authorizationValue;

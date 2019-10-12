@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 21,
+			"current": 22,
 			"list": [
 				{
 					"id": -1,
@@ -201,6 +201,13 @@
 					"id": 21,
 					"name": "pages/user/mune/myu/money/money",
 					"pathName": "pages/user/mune/myu/money/money",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/tijiao/tijiao",
+					"pathName": "pages/tijiao/tijiao",
 					"query": "",
 					"scene": null
 				}

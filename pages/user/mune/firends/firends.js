@@ -6,6 +6,7 @@ Page({
    */
   data: {
     visible:true,
+    contents: '这是可以复制的文字,粘贴后即可看到效果',
     actions4: [
       {
         name: '',
@@ -18,11 +19,27 @@ Page({
       visible: false
     });
   },
+  copyText: function (e) {
+    console.log(e)
+    wx.setClipboardData({
+      data: e.currentTarget.dataset.text,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            wx.showToast({
+              title: '复制成功'
+            })
+          }
+        })
+      }
+    })
+  },
   handleClose(){
     this.setData({
       visible: true
     });
   },
+  
   mypeople(){
     wx.navigateTo({
       url: './myfirends/myfirends',

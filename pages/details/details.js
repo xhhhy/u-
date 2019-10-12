@@ -5,9 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    busines:{}
   },
-
 
   gototijiao(e) {
     wx.navigateTo({
@@ -33,6 +32,14 @@ Page({
    */
   onShow: function () {
 
+    let business = wx.getStorageSync('business')
+    // console.log(0)
+    // console.log(business)
+
+    this.setData({
+      busines: business
+    })
+    //console.log(this.data.busines)
   },
 
   /**
@@ -66,7 +73,16 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (e) {
+    let uid = wx.getStorageSync('uid')
+    return{
+      path: '/pages/details/details?userId=' + uid,
+      success: function (res) {
+        console.log("转发成功" + res);
+        console.log(path)
+      }
+    }
+      
   }
+  
 })

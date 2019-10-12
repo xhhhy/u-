@@ -4,7 +4,8 @@
       "i-panel": "../../dist/panel/index",
         "i-icon": "../../dist/icon/index",
         "i-radio-group": "../../dist/radio-group/index",
-        "i-radio": "../../dist/radio/index"
+        "i-radio": "../../dist/radio/index",
+    "i-toast": "../../dist/toast/index"
       
   },
     "navigationBarTitleText": "提交报名"

@@ -4,7 +4,7 @@
   <text style=" height: 20px;border-left: 3px solid #3d94f3;isplay:inline-block;margin-right:10px "></text>U积分提现</view>
   <view class="content">
       <view class="alltime clearfloat">
-        <view class="changetime" wx:for='{{date}}' wx:for-index="index" wx:key="index" wx:for-item="item" style='{{key==index?"background-color: #3f9cf8;color:#fff":""}}' bindtap='changColor' data-index='{{index}}'> <text> {{item.price}}元 \n {{item.u}}U积分</text>
+        <view class="changetime" wx:for='{{date}}' wx:for-index="index" wx:key="index" wx:for-item="item" style='{{key==index?"background-color: #3f9cf8;color:#fff":""}}' bindtap='changColor' data-index='{{index}}'> <text bindtap='changColor'   data-index='{{index}}'> {{item.price}}元 \n {{item.u}}U积分</text>
         </view>
       </view>
       <view class="contfoot">

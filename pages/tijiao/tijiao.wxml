@@ -2,26 +2,26 @@
  <view class="hearder">
     <image  style="width:100%"  src='/static/image/22.png'></image>
   </view>
-<view  class="form">
+<form bindsubmit="formSubmit" bindreset="formReset" class="form">
 <i-panel  title="真实姓名">
-    <i-input value="{{ value5 }}" placeholder="请输入真实姓名" />
+    <i-input maxlength="16" name="realname" value="{{ value }}" placeholder="请输入真实姓名" />
 </i-panel>
 <i-panel title="输入手机号码">
-    <i-input value="{{ value5 }}" placeholder="请输入手机号码" />
+    <i-input  maxlength="16" name="telephone" value="{{ value }}" placeholder="请输入手机号码" />
 </i-panel>
-</view>
+
     <view class="address">
       <picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
       <view class="picker">
          <view class="addleft" >性别：          {{array[index]}} <i-icon type="unfold" size="25" color="black" />  </view>
       </view>
       </picker>
-        <picker  bindchange="bindPickerChange" value="{{index}}" range="{{array1}}">
+        <picker  bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
       <view class="picker">
-          <view class="addleft">年龄：          {{array1[index]}} <i-icon type="unfold" size="25" color="black" /> </view>
+          <view class="addleft">年龄：          {{array1[index1]}} <i-icon type="unfold" size="25" color="black" /> </view>
       </view>
     </picker>
-    </view>
+   </view>
 
 
 <view class="time">选择面试时间</view>
@@ -30,8 +30,10 @@
     <view class="changetime" wx:for='{{date}}' wx:for-index="index" wx:key="index" wx:for-item="item" style='{{key==index?"background-color: #3f9cf8;color:#fff":""}}' bindtap='changColor' data-index='{{index}}'>{{item}}
     </view>
   </view>
-  <view class="tijiao" bindtap="submit">提交报名</view>
-
+  <button class="tijiao"  formType="submit">提交报名</button>
+</form>
 
 </view>
+<i-toast id="toast" />
+
 
