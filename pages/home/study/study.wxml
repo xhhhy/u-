@@ -43,4 +43,4 @@
       </view>
 
 
-  <view class="paybottom" bindtap="pay">支付订金 ￥500.00</view>
+  <view class="paybottom" bindtap="tostudy">支付订金 ￥500.00</view>

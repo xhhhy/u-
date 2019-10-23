@@ -29,18 +29,18 @@
     <view style=" border-bottom: 5px solid #f6f6f6;"> </view>
   <view hidden="{{option==[]}}" wx:for="{{option}}" wx:key="index"  >
       <view class="massage"  bindtap="godetails" id='{{index}}' >
-        <view class="mascontent" id='{{index}}'>
-          <view class="clearfloat" id='{{index}}'>
+        <view class="mascontent" >
+          <view class="clearfloat" >
             <view class="leftmsg masname">{{item.position }}</view>
             <view class="rightmsg masprice"> {{item.salary }}</view>
           </view>
-          <view class="clearfloat" id='{{index}}'>
+          <view class="clearfloat" >
             <view class="leftmsg">
                   <view class="msgfuli" style="  display: inline-block">{{item.remark}}""</view>
             </view>
             <view class="rightmsg msgjifen"> 奖励{{item.point}}积分</view>
           </view>
-          <view class="clearfloat"id='{{index}}'>
+          <view class="clearfloat">
             <view class="leftmsg msgoffice">{{item.address}}</view>
             <view class="rightmsg msgaddress"> {{item.region}}</view>
           </view>
@@ -53,7 +53,7 @@
 
   </view>
 </view>
-<view hidden="nomsg" class="nomsg">
+<view wx:if="{{nomsg}}" class="nomsg">
     <image  src="/static/image/nomsg.png"></image>
     暂无信息
 </view>

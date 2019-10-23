@@ -14,8 +14,10 @@ Page({
     value:""
   },
   formSubmit(e){
-    console.log(e.detail.value.business)
     let formdata = e.detail.value
+    formdata.region = this.data.region[0] + this.data.region[1] + this.data.region[2]
+    console.log(formdata)
+
         if (e.detail.value.business == "") {
           $Toast({
             content: '企业名称不能为空',
@@ -49,7 +51,7 @@ Page({
     let uid = wx.getStorageSync('uid');
         util.request({
           url: util.baseUrl + "/user_weichat.php/Recruitment/addRecruitment",
-          hearder:{
+          header:{
             "Content-Type": "application/x-www-form-urlencoded",
             'token': token,
             'uid': uid,
@@ -70,6 +72,14 @@ Page({
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       region: e.detail.value
+    })
+  },
+  bindHideKeyboard(){
+    console.log(0)
+    wx.hideKeyboard({
+      complete: res => {
+        console.log('hideKeyboard res', res)
+      }
     })
   },
   //重置表单

@@ -30,13 +30,13 @@
     <view class="footer">
     <i-row>
       <i-col span="8" i-class="col-class">
-        <button open-type="share"><image src="/static/image/微信分享.png"></image></button>
+        <button  style="background-color: #fff;" open-type="share"><image src="/static/image/微信分享.png"></image></button>
       </i-col>
       <i-col span="8" i-class="col-class">
         <view  bindtap='copyText' data-text="{{contents}}" ><image src="/static/image/复制链接.png"></image></view>
       </i-col>
       <i-col span="8" i-class="col-class">
-        <view><image src="/static/image/推广海报.png"></image></view>
+        <view  bindtap='estension' ><image src="/static/image/推广海报.png"></image></view>
       </i-col>
       </i-row>
       <view class="footmsg">分享后引导好友绑定手机号码，可更快获得奖励哦！</view>

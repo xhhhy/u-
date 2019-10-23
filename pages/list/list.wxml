@@ -6,39 +6,35 @@
     </i-tab>
 </i-tabs>
 
-    <view class="verify" wx:if="{{current =='tab1'}}">
-      <view class="option">
-            <view class="newmsgicon"> </view>
-            <view class="optiontime">2019/12/01  13:11</view>
-            <view class="optionmsg">恭喜您已提交面试申请，请您耐心等候客服审核。</view>
-      </view>
-        <view class="option">
-            <view class="newmsgicon"> </view>
-            <view class="optiontime">2019/12/01  13:11</view>
-            <view class="optionmsg">恭喜您已提交面试申请，请您耐心等候客服审核。</view>
+    <view class="verify"   wx:if="{{current =='tab1'}}">
+       <view class="option"   wx:for="{{privateMessage}}" wx:key="{{index}}" id='{{index}}' bindtap="prevateContent" >
+            <view hidden="{{item.read_time!==0}}" class="newmsgicon"> </view>
+            <view class="optiontime">{{item.time}}</view>
+            <view class="optionmsg"> 
+            <i-row>
+                <i-col span="22" i-class="col-class">{{item.title}}</i-col>
+                <i-col span="2" i-class="col-class"><i-icon type="enter" size="16" color="#000" /></i-col>
+            </i-row>
+            </view>
       </view>
     </view>    
+  
+  
+  
+  
+  
+  
+  
     <view  class="verify" wx:else="{{current =='tab2'}}">
-       <view class="option" bindtap="levelcontent" >
-            <view class="newmsgicon"> </view>
-            <view class="optiontime">2019/12/01  13:11</view>
+       <view class="option"   wx:for="{{publicMessage}}" wx:key="{{index}}" id='{{index}}' bindtap="levelcontent" >
+            <view hidden="{{item.read_time!==null}}" class="newmsgicon"> </view>
+            <view class="optiontime">{{item.time}}</view>
             <view class="optionmsg"> 
             <i-row>
-                <i-col span="22" i-class="col-class">平台升级公告</i-col>
+                <i-col span="22" i-class="col-class">{{item.title}}</i-col>
                 <i-col span="2" i-class="col-class"><i-icon type="enter" size="16" color="#000" /></i-col>
             </i-row>
-        </view>
+            </view>
       </view>
-       <view class="option">
-            <view class="newmsgicon"> </view>
-            <view class="optiontime">2019/12/01  13:11</view>
-            <view class="optionmsg"> 
-            <i-row>
-                <i-col span="22" i-class="col-class">应聘注意事项</i-col>
-                <i-col span="2" i-class="col-class"><i-icon type="enter" size="16" color="#000" /></i-col>
-            </i-row>
-        </view>
       </view>
-    
-    </view>    
 

@@ -1,9 +1,9 @@
 
 <view class="content">
 <view class="top">
-  <view class="user"><image style="border-radius: 50%" src="{{userimg}}"></image></view>
+  <view class="user"><image style="border-radius: 50%" src="{{userinfo.avatarUrl}}"></image></view>
   <view  class="userid">
-    <view class="username">LUTHI</view>
+    <view class="username">{{userinfo.nickName}}</view>
     <view class="userlv">ID:100020  |  青铜达人
   </view>
   </view>

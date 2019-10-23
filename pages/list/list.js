@@ -1,12 +1,17 @@
 // pages/list/list.js
-Page({
+const util = require('../../utils/util.js')
 
+Page({
+  
   /**
    * 页面的初始数据
    */
   data: {
       current: 'tab1',
-      current_scroll: 'tab1'
+      current_scroll: 'tab1',
+    privateMessage: [],
+    publicMessage:[]
+
   },
   handleChange({ detail }) {
     this.setData({
@@ -14,16 +19,55 @@ Page({
       show: detail.key
     });
   },
-  levelcontent(){
+  prevateContent(e){
+    console.log(e)
+    wx.setStorageSync("prevateMsg", this.data.privateMessage[e.currentTarget.id - 0])
+
+    wx.navigateTo({
+      url: './prevateContent/prevateContent',
+    })
+  },
+  levelcontent(e){
+    wx.setStorageSync("publicMsg", this.data.publicMessage[e.currentTarget.id-0]  )
       wx.navigateTo({
         url: './contentmsg/contentmsg',
       })
+      
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that =this
+    util.request({
+      url: util.baseUrl +"/user_weichat.php/Message/listPublicMessage",
+      method: 'GET',
+      success: function (res) {
+        res.data.map(item => {
+          let newtime = util.formatTime(item.publish_time)
+          item.time = newtime
+        })
+        that.setData({
+          publicMessage: res.data
+        })
+        
+      }
+    })
+    util.request({
+      url: util.baseUrl + "/user_weichat.php/Message/listPrivateMessage",
+      method: 'GET',
+      success: function (res) {
+        res.data.map(item=>{
+          let newtime = util.formatTime(item.publish_time)
+          item.time = newtime
+        })
+        that.setData({
+          privateMessage: res.data
+        })
 
+      }
+    })
+    
   },
 
   /**

@@ -1,0 +1,2 @@
+<view class="topImage"><image src="{{img}}" ></image></view>
+<view bindtap="downloadImg" class="tijiao"  formType="submit">保存到我的相册</view>

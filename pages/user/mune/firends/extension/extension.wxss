@@ -1,0 +1,25 @@
+/* pages/user/mune/firends/extension/extension.wxss */
+.topImage image{
+  width: 100%;
+  height: 100%
+  
+}
+ .topImage{
+   width: 90%;
+    margin: 40px auto 20px;
+    height: 600px;
+ }
+ .tijiao{
+background-color: #3f9bf8;
+ background-image: linear-gradient( to right,#317afe, #419ff7);
+border-radius: 20px;
+color: #fff;
+font-size: 16px;
+text-align: center;
+margin-top: 40px;
+width: 85%;
+margin: 40px auto 20px;
+padding-top: 15px ;
+padding-bottom: 15px;
+
+}

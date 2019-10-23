@@ -1,5 +1,7 @@
 import config from "../config.js"
-const formatTime = date => {
+const formatTime = format => {
+  var date = new Date(format);
+
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
@@ -20,6 +22,7 @@ const numberToFixed = n => {
 }
 
 const baseUrl = "http://recruit-local.com" //获取接口URL
+
 const app = getApp();
 
 const request = (object) => {

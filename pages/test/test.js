@@ -1,20 +1,36 @@
-// pages/home/study/study.js
+// pages/test/test.js
+const util = require('../../utils/util.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-    imgUrls: ["/static/image/图层 21.png", "/static/image/图层 21.png", "/static/image/图层 21.png"],
-    indicatorDots: true,
-    indicatorColor: "#fff",
-    index: 0,
-  },
-  tostudy(){
-    wx.navigateTo({
-      url: './payform/payform',
-    })
   
+  data: {
+
+  },
+
+
+  formSubmit(e){
+    let token = wx.getStorageSync('token');
+    let openid = wx.getStorageSync('openid');
+    let uid = wx.getStorageSync('uid');
+    wx.request({
+      url: 'http://recruit-local.com/user_weichat.php/Position/apply',
+      hearder: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        'token': token,
+        'uid': uid,
+        'openid': openid
+      },
+      data: e.detail.value,
+      method: 'POST',
+      success: function (res) {
+        console.log(res)
+        
+      }
+    })
   },
 
   /**

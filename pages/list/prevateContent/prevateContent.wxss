@@ -1,4 +1,3 @@
-/* pages/list/contentmsg/contentmsg.wxss */
 .verify{
   width: 90%;
   margin: 20px  auto 10px;

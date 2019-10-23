@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/test/test",
+    
     "pages/index/index",
     "pages/user/user",
     "pages/home/home",
@@ -30,8 +32,9 @@
     "pages/lssue/lssuesuccess/lssuesuccess",
     "pages/user/mune/myu/money/money",
     "pages/user/mune/myu/myusuccess/myusuccess",
-    "pages/authorizetip/authorizetip"
-    
+    "pages/authorizetip/authorizetip",
+    "pages/list/prevateContent/prevateContent",
+    "pages/user/mune/firends/extension/extension"
   ],
   "window": {
     "backgroundTextStyle": "light",

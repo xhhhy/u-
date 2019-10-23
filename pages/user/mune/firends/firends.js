@@ -19,6 +19,12 @@ Page({
       visible: false
     });
   },
+  estension(e){
+      console.log()
+      wx.navigateTo({
+        url: './extension/extension',
+      })
+  },
   copyText: function (e) {
     console.log(e)
     wx.setClipboardData({

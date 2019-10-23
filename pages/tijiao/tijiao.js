@@ -60,19 +60,15 @@ Page({
     data.age = this.data.array1[this.data.index1]
     data.interview_time = this.data.date[this.data.key]
     data.uid = uid
-
-    console.log(data)
-
-
     util.request({
       url: util.baseUrl + "/user_weichat.php/Position/apply",
-      hearder: {
+      header: {
         "Content-Type": "application/x-www-form-urlencoded",
         'token': token,
         'uid': uid,
         'openid': openid
       },
-      data: e.detail.value,
+      data: data,
       method: 'POST',
       success: function (res) {
         if (res.statusCode==200){
@@ -81,12 +77,9 @@ Page({
             url: './success/success',
           })
         }
-       
+        console.log(res)
       }
     })
-
-
-
     // wx.redirectTo({
     //   url: './success/success',
     // })

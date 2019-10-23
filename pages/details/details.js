@@ -78,7 +78,6 @@ Page({
     return{
       path: '/pages/details/details?userId=' + uid,
       success: function (res) {
-        console.log("转发成功" + res);
         console.log(path)
       }
     }

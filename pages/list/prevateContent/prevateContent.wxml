@@ -1,0 +1,11 @@
+
+  <view class="verify">
+      <view class="option">
+            <view class="optiontime">{{prevateMsg.time}}</view>
+            <view class="optionmsg">{{prevateMsg.title}}</view>
+      </view>
+</view>
+
+<view class="content">
+<view>{{prevateMsg.detail}}</view>
+</view>

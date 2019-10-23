@@ -1,2 +1,56 @@
-<!--pages/user/enroll/myview/myview.wxml-->
-<text>pages/user/enroll/myview/myview.wxml</text>
+<view class="content">
+      <view class="head">
+      <view class="circle"></view>
+      <view class="circle1"></view>
+      <view class="headContent">
+        <i-row>
+          <i-col span="12" i-class="col-class">
+          <view class="lefthead">
+              <view style=" font-weight: 550;font-size: 15px">{{busines.position}}</view>
+              <view>{{busines.business}}</view>
+          </view>
+          </i-col>
+          <i-col span="12" i-class="col-class">
+          <view class="rigthhead">
+              <view style="font-size: 15px;color:red;">{{busines.salary}}/月</view>
+              <view  class="color{{ busines.interview_result==0?'b':''||busines.interview_result==-1?'d':''||busines.interview_result==1?'a':''||busines.id==2?'b':''}}">{{busines.interview_result==0?'等待面试':''||busines.interview_result==-1?'面试失约':''||busines.interview_result==1?'面试成功':''||busines.id==2?'面试失败':''}}</view>
+         </view></i-col>
+        </i-row>
+      </view>
+    
+    
+      </view>
+      <view class="bottom">
+      <view class="bottomContent">
+
+       <i-row>
+          <i-col span="12" i-class="col-class">
+          <view class="lefthead bottomleft">
+              <view>面试时间：</view>
+              <view>面试地址：</view>
+              <view>联系人：</view>
+              <view>联系电话：</view>
+          </view>
+          </i-col>
+          <i-col span="12" i-class="col-class">
+          <view class="rigthhead">
+              <view>{{busines.interview_time}}</view>
+              <view>{{busines.region}}</view>
+              <view>{{busines.realname}}</view>
+              <view>{{busines.telephone}}</view>
+
+         </view></i-col>
+        </i-row>
+        <view class="bottomleft">备注说明：</view>
+        <view>{{position.remark}}</view>
+
+
+      </view>
+      </view>
+
+
+
+
+
+
+</view>

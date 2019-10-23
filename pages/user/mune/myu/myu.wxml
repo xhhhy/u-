@@ -14,7 +14,7 @@
         </view>
   </view>
 </view>
-<view class="msg"> <text style=" height: 20px;border-left: 3px solid #3d94f3;isplay:inline-block;margin-right:10px "></text>U积分记录</view>
+<view class="msg"> <text style=" height: 20px;border-left: 1% solid #3d94f3;isplay:inline-block;margin-right:10px "></text>U积分记录</view>
     <view class="footer">
     <i-row  i-class="row" wx:for="{{list}}" wx:key="{{index}}">
           <i-col span="16" i-class="col-class">

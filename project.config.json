@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 22,
+			"current": 28,
 			"list": [
 				{
 					"id": -1,
@@ -209,6 +209,47 @@
 					"name": "pages/tijiao/tijiao",
 					"pathName": "pages/tijiao/tijiao",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/test/test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/enroll/myenroll/myenroll",
+					"pathName": "pages/user/enroll/myenroll/myenroll",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/mune/firends/extension/extension",
+					"pathName": "pages/user/mune/firends/extension/extension",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/enroll/myview/myview",
+					"pathName": "pages/user/enroll/myview/myview",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]

@@ -1,0 +1,6 @@
+<form bindsubmit="formSubmit" bindreset="formReset" class="form">
+       <input  class="searchinput" value="{{value}}"  name="business"   placeholder="请输入企业名称" />
+       <input  class="searchinput"  value="{{value}}" name="contact"   placeholder="请输入企业联系人" />
+       <input  class="searchinput"  value="{{value}}" type="number"  name="telephone"  placeholder="请输入联系人手机号" />
+       <button  class="tijiao"  formType="submit">提交审核 </button >
+  </form> 

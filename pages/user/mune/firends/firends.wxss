@@ -77,3 +77,6 @@ max-width: 100%;
     font-size: 14px;
     padding-top: 10px;
   }
+  button::after{
+    border: none
+  }

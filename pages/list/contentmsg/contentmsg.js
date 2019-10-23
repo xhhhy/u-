@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    publicMsg:{}
   },
 
   /**
@@ -26,7 +26,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let publicMsg=  wx.getStorageSync("publicMsg")
+    this.setData({
+      publicMsg: publicMsg
+    })
   },
 
   /**

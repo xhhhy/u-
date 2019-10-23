@@ -23,7 +23,7 @@
 
     
 <view class="bottom">
-  <view class="bottomleft">取消</view>
+  <view class="bottomleft"  bindtap="goback">取消</view>
   <view class="bottomright" bindtap="submit">微信支付>></view>
 </view>
 

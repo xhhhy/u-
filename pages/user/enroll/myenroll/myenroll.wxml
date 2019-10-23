@@ -9,19 +9,19 @@
 </view>
 
  <view class="verify" wx:if="{{current =='tab1'}}">
-  <view class="enrolllist" wx:for="{{options}}" wx:key="{{index}}">
+  <view class="enrolllist" wx:for="{{option}}" wx:key="{{index}}" bindtap="tomyorder" id="{{item.position_id}}">
       <i-row>
         <i-col span="12" i-class="col-class">
         <view class="leftlist">
-          <view class="leftname">{{item.name}}  </view>
-          <view class="leftprice"> {{item.price}}/月</view>
-          <view> {{item.office}}</view>
+          <view class="leftname">{{item.position}}  </view>
+          <view class="leftprice"> {{item.salary}}/月</view>
+          <view> {{item.business}}</view>
         </view>
         </i-col>
         <i-col span="12" i-class="col-class"><view class="rightlist">
-        <view bindtap="tomyorder"><i-icon type="enter" size="20" color="#000" /></view>
-          <view class="{{item.state==true?'rightmsg':'rightmsgoff'}}"> {{item.msg}}</view>
-          <view class="righttime">{{item.time}} </view>
+        <view ><i-icon type="enter" size="20" color="#000" /></view>
+          <view class="{{item.implement_interview_time==0?'rightmsg':'rightmsgoff'}}"> {{item.implement_interview_time==0?"待通知":"申请失败"}}</view>
+          <view class="righttime">{{item.interview_time}} </view>
         </view>
         </i-col>
     </i-row>
@@ -30,19 +30,19 @@
 
 </view>
  <view class="verify" wx:if="{{current =='tab2'}}">
-      <view class="enrolllist" wx:for="{{options1}}" wx:key="{{index}}">
+      <view class="enrolllist" id="{{index}}" wx:for="{{option}}" bindtap="tomyview" wx:key="{{index}}">
       <i-row>
         <i-col span="12" i-class="col-class">
         <view class="leftlist">
-          <view class="leftname">{{item.name}}  </view>
-          <view class="leftprice"> {{item.price}}/月</view>
-          <view> {{item.office}}</view>
+          <view class="leftname">{{item.position}}  </view>
+          <view class="leftprice"> {{item.salary}}/月</view>
+          <view> {{item.business}}</view>
         </view>
         </i-col>
         <i-col span="12" i-class="col-class"><view class="rightlist">
         <view><i-icon type="enter" size="20" color="#000" /></view>
-          <view class="color{{ item.id==0?'a':''||item.id==1?'b':''||item.id==2?'c':''||item.id==3?'d':''}}"> {{item.msg}}</view>
-          <view class="righttime">{{item.time}} </view>
+          <view  class="color{{ item.interview_result==0?'b':''||item.interview_result==-1?'d':''||item.interview_result==1?'a':''||item.id==2?'b':''}}"> {{item.interview_result==0?'等待面试':''||item.interview_result==-1?'面试失约':''||item.interview_result==1?'面试成功':''||item.id==2?'面试失败':''}}</view>
+          <view class="righttime">{{item.interview_time}} </view>
         </view>
         </i-col>
     </i-row>

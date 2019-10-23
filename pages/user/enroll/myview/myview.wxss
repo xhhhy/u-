@@ -1,1 +1,78 @@
 /* pages/user/enroll/myview/myview.wxss */
+
+page{height:100%}
+.content{
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 10%;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( #2f75ff,#419ff7)
+}
+.head{
+  padding-top: 15px;
+  width: 90%;
+  height: 15%;
+  background-color: white;
+  border-bottom: 2px dotted red;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+}
+.bottom{
+    width: 90%;
+  height: 65%;
+  background-color: white;
+  margin: 0 auto;
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: rgb(51, 127, 252);
+    position: absolute;
+    left: -10px;
+      top: 93%;
+}
+.circle1{
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: rgb(51, 128, 253);
+    position: absolute;
+    right: -10px;
+    top: 93%;
+}
+.headContent{
+  width: 85%;
+  margin:  10px auto;
+  line-height: 2;
+}
+.bottomContent{
+    width: 85%;
+  margin: 0 auto;
+  line-height: 2.5;
+  padding-top: 20px;
+}
+.lefthead{
+  text-align: left
+}
+.rigthhead{
+  text-align: right;
+}
+.bottomleft{
+  color: #999999
+}
+  .colora{
+    color: #ffa200
+  }
+  .colorb{
+    color: #1acc51
+  }
+.colorc{
+    color: #ea1212
+  }
+.colord{
+    color: #d3d3d3
+  }
+

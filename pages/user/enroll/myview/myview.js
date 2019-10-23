@@ -1,18 +1,36 @@
 // pages/user/enroll/myview/myview.js
+const util = require('../../../../utils/util.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    busines:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // console.log(options.id)
+    // let that = this
+    // util.request({
+    //   url: 'http://recruit-local.com/index_weichat.php/Index/detail?id=' + options.id,
+    //   success: res => {
+    //     console.log(res.data)
+    //     that.setData({
+    //       busines: res.data
+    //     })
+    //   }
+    // })
+    let busines = wx.getStorageSync("usercontent")
+    console.log(busines)
+      this.setData({
+        busines: busines
+      })
+      
   },
 
   /**

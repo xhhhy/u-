@@ -1,4 +1,6 @@
 // pages/user/enroll/myenroll/myenroll.js
+const util = require('../../../../utils/util.js')
+
 Page({
 
   /**
@@ -7,61 +9,7 @@ Page({
   data: {
     current: 'tab1',
     current_scroll: 'tab1',
-    options:[{
-      name:"普工",
-      price:"5000~6000",
-      office:"深圳富士康有限公司",
-      state:true,
-      msg:"待通知",
-      time:"2019/10/01 14:52"
-    },
-      {
-        name: "普工",
-        price: "5000~6000",
-        office: "深圳富士康有限公司",
-        state: false,
-        msg: "申请失败",
-        time: "2019/10/01 14:52"
-      }
-    ],
-    options1: [{
-      name: "普工",
-      price: "5000~6000",
-      office: "深圳富士康有限公司",
-      state: true,
-      msg: "面试成功",
-      time: "2019/10/01 14:52",
-      id:0
-    },
-    {
-      name: "普工",
-      price: "5000~6000",
-      office: "深圳富士康有限公司",
-      state: false,
-      msg: "进行面试",
-      time: "2019/10/01 14:52",
-      id: 1
-    },
-      {
-        name: "普工",
-        price: "5000~6000",
-        office: "深圳富士康有限公司",
-        state: false,
-        msg: "面试失败",
-        time: "2019/10/01 14:52",
-        id: 2
-      },
-      {
-        name: "普工",
-        price: "5000~6000",
-        office: "深圳富士康有限公司",
-        state: false,
-        msg: "面试失约",
-        time: "2019/10/01 14:52",
-        id: 3
-      }
-
-    ]
+    option:[],
     
     },
   handleChange({ detail }) {
@@ -70,11 +18,20 @@ Page({
       show: detail.key
     });
   },
-  tomyorder(){
+  tomyorder(e){
+    console.log(e)
+     wx.navigateTo({
+       url: './myorderlist/myorderlist?id='+e.currentTarget.id,
+     })
+  },
+  tomyview(e) {
+    wx.setStorageSync("usercontent", this.data.option[e.currentTarget.id])
     wx.navigateTo({
-      url: './myorderlist/myorderlist',
+      url: '/pages/user/enroll/myview/myview',
     })
   },
+  
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -94,13 +51,23 @@ Page({
             }
           },
         })
+
+        util.request({
+          url: util.baseUrl +"/user_weichat.php/Position/listPositionApply",
+          method: 'GET',
+          success: function (res) {
+            that.setData({
+              option: res.data
+            })
+            console.log()
+          }
+        })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

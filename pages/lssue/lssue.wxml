@@ -3,11 +3,11 @@
       <image src="/static/image/11.png"></image>
   </view>
   <form bindsubmit="formSubmit" bindreset="formReset" class="form">
-       <input  class="searchinput" value="{{value}}"  name="business"   placeholder="请输入企业名称" />
+       <input  class="searchinput" value="{{value}}"  bindinput="bindHideKeyboard" name="business"   placeholder="请输入企业名称" />
          <picker  mode="region"  value="{{value}}"   bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-            <input name="region"  class="searchinput"  value="{{region[0]}}{{region[1]}}{{region[2]}}"  autofocus placeholder="点击选择企业区域" />
+            <view name="region"  class="searchinput"> {{region[0]==""?'点击选择企业区域':region[0]}}{{region[1]}}{{region[2]}}</view>
          </picker>
-       <input  class="searchinput"  value="{{value}}" name="contact"   placeholder="请输入企业联系人" />
+       <input  class="searchinput"  value="{{value}}"    name="contact"   placeholder="请输入企业联系人" />
        <input  class="searchinput"  value="{{value}}" type="number"  name="telephone"  placeholder="请输入联系人手机号" />
        <view class="message">注：提供虚假信息者，平台将进行封号处理。</view>
        <button  class="tijiao"  formType="submit">提交审核 </button >

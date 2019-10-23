@@ -4,61 +4,105 @@ const app = getApp()
 
 Page({
   data: {
-    nomsg:true,
+    nomsg:false,
     imgUrls: ["/static/image/8.png", "/static/image/3.png", "/static/image/8.png"],
     indicatorDots:true,
     indicatorColor:"#fff",
     index: 0,
-    multiArray: [['深圳市', '河北市'], ['职位', '职位1', '职位2', ]],
+    multiArray: [[],[]],
     multiIndex: [0,  0],
-    option:[]
+    option:[],
+    options:[]
   },
   //事件处理函数
 
   //职位选择
   bindMultiPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       multiIndex: e.detail.value
     })
+    let region = this.data.multiArray[0][e.detail.value[0]]
+    let possion= this.data.multiArray[1][e.detail.value[1]]
+    //console.log(region, possion)
+    let searchOption = this.data.options
+    let newoption = []
+    if (e.detail.value[0]==0 && e.detail.value[1]==0){
+      newoption = searchOption
+     // console.log(newoption)
+    }
+    else if (e.detail.value[0] == 0) {
+    searchOption.map(list=>{
+      if (list.position == possion) {
+          newoption.push(list)
+        }
+      })
+    }
+    else if (e.detail.value[1] == 0) {
+      searchOption.map(list => {
+        if (list.region == region) {
+          newoption.push(list)
+        }
+      })
+    }
+    else{
+      searchOption.map(list => {
+        if (region == list.region && list.position == possion) {
+          newoption.push(list)
+        }
+      })
+    }
+    if (newoption.length !== 0) {
+      this.setData({
+        nomsg: false,
+        option: newoption
+      })
+    } else {
+      this.setData({
+        nomsg: true,
+        option: newoption
+      })
+    }
   },
-
-
   godetails(e){
-    console.log()
-    wx.setStorageSync("business", this.data.option[e.target.id])
-   
-
+    //console.log(e)
+    wx.setStorageSync("business", this.data.option[e.currentTarget.id-0])
     wx.navigateTo({
       url: '../details/details',
     })
   },
   search(){
-    console.log(util.request)
-    util.request({
-      url: util.baseUrl+"/testPost.php",
-      data:{a:123,b:123},
-      method: 'POST',
-      success: function (res) {
-        console.log(res)
-      }
-    })
+
+  },
+
+//城市去重
+  unique(arr) {
+    const res = new Map();
+    return arr.filter((a) => !res.has(a) && res.set(a, 1))
   },
   onLoad: function () {
+   
     let that = this
     util.request({
-      url: "http://recruit-local.com/index_weichat.php",
+      url: util.baseUrl+"/index_weichat.php",
       method: 'GET',
       success: function (res) {
-        that.setData({
-          option: res.data
+        let cityOption = [["所有城市"], ['所有职位']]
+        res.data.map(list=>{
+          cityOption[0].push(list.region)
+          cityOption[1].push(list.position)
         })
-        console.log(that.data.option)
+        cityOption[0] =  that.unique(cityOption[0])
+        cityOption[1]=  that.unique(cityOption[1])
+        that.setData({
+          option: res.data,
+          options:res.data,
+          multiArray: cityOption
+        })
+        //console.log(that.data.option)
         if (that.data.option==[]){
           that.setData({
             nomsg: false
           })
-
         }
       }
     })
@@ -90,7 +134,7 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
+    //console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

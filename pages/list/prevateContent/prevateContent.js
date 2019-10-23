@@ -1,27 +1,18 @@
-// pages/home/study/study.js
+// pages/list/contentmsg/contentmsg.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: ["/static/image/图层 21.png", "/static/image/图层 21.png", "/static/image/图层 21.png"],
-    indicatorDots: true,
-    indicatorColor: "#fff",
-    index: 0,
-  },
-  tostudy(){
-    wx.navigateTo({
-      url: './payform/payform',
-    })
-  
+    publicMsg: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    prevateMsg:{}
   },
 
   /**
@@ -35,7 +26,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let prevateMsg = wx.getStorageSync("prevateMsg")
+    this.setData({
+      prevateMsg: prevateMsg
+    })
   },
 
   /**

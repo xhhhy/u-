@@ -7,8 +7,24 @@ App({
     userAuthorization: ''
   },
   //启动
-  onLaunch: function () {
+  onLaunch: function (opt) {
     this.getUserInfo()
+    this.shareInfo(opt)
+
+  },
+   shareInfo(opt){
+     //console.log(opt)
+      //1044转发场景值
+      if (opt.scene == 1044) {
+        wx.getShareInfo({
+          shareTicket: opt.shareTicket,
+          success: function (res) {
+           // console.log(res)
+            var encryptedData = res.encryptedData;
+            var iv = res.iv;
+          }
+        })
+        }
   },
   //获取用户信息
   getUserInfo: function () {
@@ -35,7 +51,7 @@ App({
     })
     wx.getUserInfo({
       success: function (res) {
-        console.log(res)
+       // console.log(res)
         that.globalData.userInfo = res.userInfo;
         that.globalData.rawData = res.rawData;   //zaj add
         that.globalData.encryptedData = res.encryptedData;
@@ -63,7 +79,7 @@ App({
                       wx.setStorageSync('token', res.data.token);
                       wx.setStorageSync('openid', res.data.openid);
                       wx.setStorageSync('uid', res.data.uid);
-                      wx.setStorageSync('userimg', that.globalData.userInfo.avatarUrl);
+                      wx.setStorageSync('userinfo', that.globalData.userInfo);
 
                     //  wx.setStorageSync('authorization', "Bearer " + authorizationValue);
                     //  that.globalData.userAuthorization = "Bearer " + authorizationValue;
