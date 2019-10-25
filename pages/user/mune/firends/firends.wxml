@@ -5,11 +5,11 @@
     <view class="people">
       <i-row>
       <i-col span="12" i-class="col-class">
-        <view><text class="peoplefont">112</text>人</view>
+        <view><text class="peoplefont">{{grandson}}</text>人</view>
         <view >达人直系</view>
       </i-col>
       <i-col span="12" i-class="col-class">
-        <view><text class="peoplefont">112</text>人</view>
+        <view><text class="peoplefont">{{son}}</text>人</view>
         <view>直系下属</view>
       </i-col>
       </i-row>
@@ -23,7 +23,6 @@
         <view class="titile">活动规则</view>
         <view>1、每成功推荐一名达人直系，可获得U积分奖励；  </view>
         <view> 2、达人直系完成任务或应聘职位，可获得相应奖励 </view>
-        <view>3、介绍介绍介绍介绍介绍介</view>
     </view>
   </view>
   </view>

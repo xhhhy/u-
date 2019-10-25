@@ -1,4 +1,5 @@
 // pages/user/mune/firends/myfirends/myfirends.js
+import util from "../../../../../utils/util.js"
 Page({
 
   /**
@@ -12,6 +13,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that =this
+    util.request({
+      url:util.baseUrl+"/user_weichat.php/Friend/listSon",
+      method:"GET",
+      success(res){
+        if(res.data.status==200){
+          console.log(res.data.data)
+          that.setData({
+            data: res.data.data
+          })
+        }
+      }
+    })
 
   },
 

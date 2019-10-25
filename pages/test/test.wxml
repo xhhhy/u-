@@ -1,51 +1,56 @@
-
 <view class="content">
-<view class="head" style="background:url('../../static/image/20.png'); background-size: 400px 240px;">
-</view>
-<view class="submitform">
-<form bindsubmit="formSubmit" class="form" bindreset="formReset" class="form">
-<view style="width: 80%;margin: 25px auto 60px">
-<i-row>
-    <i-col span="2" i-class="col-class"> <view style="padding-top:10px;">
-    <image style="width:18px;height:24px" src="/static/image/23.png"></image>
-    </view></i-col>
-    <i-col span="20" i-class="col-class">
-    <view class="input input">
-    <i-input value="{{ value2 }}" maxlength="20" type="number" name="telephone" title=""  placeholder="绑定手机号码" />
-    </view>
-    </i-col>
-    <i-col span="2" i-class="col-class"></i-col>
-</i-row>
-<i-row>
-    <i-col span="2" i-class="col-class">
-    <view style="padding-top:10px;">
-    <image style="width:20px;height:24px" src="/static/image/21.png"></image>
-    </view>
-    </i-col>
-    <i-col span="16" i-class="col-class">
-    <view class="input">
-    <i-input value="{{ value1 }}" name="yanzheng" title="" maxlength="20" autofocus placeholder="右侧验证码" />
-    </view>
+  <view class="head" style="background:url('../../static/image/20.png'); background-size: 400px 240px;">
+  </view>
+  <view class="submitform">
+    <form bindsubmit="formSubmit" class="form" bindreset="formReset" class="form">
+      <view style="width: 80%;margin: 25px auto 60px">
+        <i-row>
+          <i-col span="2" i-class="col-class">
+            <view style="padding-top:10px;">
+              <image style="width:18px;height:24px" src="/static/image/23.png"></image>
+            </view>
+          </i-col>
+          <i-col span="20" i-class="col-class">
+            <view class="input input">
+              <i-input value="{{ value2 }}" maxlength="20" type="number" name="telephone" title="" placeholder="绑定手机号码" />
+            </view>
+          </i-col>
+          <i-col span="2" i-class="col-class"></i-col>
+        </i-row>
+        <i-row>
+          <i-col span="2" i-class="col-class">
+            <view style="padding-top:10px;">
+              <image style="width:20px;height:24px" src="/static/image/21.png"></image>
+            </view>
+          </i-col>
+          <i-col span="16" i-class="col-class">
+            <view class="input">
+              <i-input value="{{ value1 }}" name="yanzheng" title="" maxlength="20" autofocus placeholder="右侧验证码" />
+            </view>
 
-    </i-col>
-    <i-col span="6" i-class="col-class"><view bindtap="changeVerify" class="verify">{{verify}}</view></i-col>
-</i-row>
-<i-row>
-    <i-col span="2" i-class="col-class">
-       <view style="padding-top:10px;">
-   <i-icon size="26" color="#388bfb" type="mail_fill" />
-    </view></i-col>
-    <i-col span="16" i-class="col-class">
-    <view class="input">
-    <i-input value="{{ value1 }}" name="message" title="" maxlength="20" autofocus placeholder="短信验证码" />
-    </view>
-    </i-col>
-    <i-col span="6" i-class="col-class"><view bindtap="changetitle" style="font-size:12px; color:#388bfb; margin-top:12px;" >{{title}}</view></i-col>
-</i-row>
-</view>
-       <button  class="tijiao" formType="submit">绑定 </button >
-  </form> 
-</view>
+          </i-col>
+          <i-col span="6" i-class="col-class">
+            <view bindtap="changeVerify" class="verify">{{verify}}</view>
+          </i-col>
+        </i-row>
+        <i-row>
+          <i-col span="2" i-class="col-class">
+            <view style="padding-top:10px;">
+              <i-icon size="26" color="#388bfb" type="mail_fill" />
+            </view>
+          </i-col>
+          <i-col span="16" i-class="col-class">
+            <view class="input">
+              <i-input value="{{ value1 }}" name="message" title="" maxlength="20" autofocus placeholder="短信验证码" />
+            </view>
+          </i-col>
+          <i-col span="6" i-class="col-class">
+            <view bindtap="changetitle" style="font-size:12px; color:#388bfb; margin-top:12px;">{{title}}</view>
+          </i-col>
+        </i-row>
+      </view>
+      <button class="tijiao" formType="submit">绑定 </button>
+    </form>
+  </view>
 
 </view>
-

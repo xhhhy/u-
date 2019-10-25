@@ -7,10 +7,10 @@
   <view class="options">
   <view class="clear" wx:for="{{options}}" wx:key="{{index}}">
     <view class="leftoption">
-    <view>{{item.name}} <text class="ucolor">+{{item.uid}}积分</text></view>
-    <view class="massage">{{item.msg}}</view>
+    <view>{{item.title}} <text class="ucolor">+{{item.user_need==null?item.score:item.user_score}}积分</text></view>
+    <view class="massage">可选择任一职位招聘信息</view>
     </view>
-    <view class="rigthoption"><text style="color: #3e99f8;">1</text>/3<text class="{{item.sta==true?'success':'unsuccess'}}">{{item.state}}</text></view>
+    <view class="rigthoption" bindtap="receive" id="{{item.assignment_id}}" data-ismsg="{{item.state}}" ><text style="color: #3e99f8;">{{item.user_finish==null?0:item.user_finish}}</text>/{{item.need}}<text class="{{item.state?'success':'unsuccess'}}">{{item.message}}</text></view>
   </view>
   </view>
 </view>

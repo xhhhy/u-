@@ -13,7 +13,7 @@ Page({
       address: "myenroll"
 
     }, {
-      image: "/static/image/lnk.png",
+        image: "/static/image/lnk.png",
       name: "我的面试",
         address: "myview"
 
@@ -86,10 +86,6 @@ Page({
       }
       // let navaddress = `./enroll/${e.currentTarget.id}/${e.currentTarget.id}`
       console.log(e.currentTarget.id)
-
-      
-
-
   },
   /**
    * 生命周期函数--监听页面加载

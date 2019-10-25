@@ -1,4 +1,6 @@
 // pages/user/mune/firends/firends.js
+import util from "../../../../utils/util.js"
+
 Page({
 
   /**
@@ -13,6 +15,10 @@ Page({
         icon: 'close'
       }
     ],
+    grandson:new Number(),
+    son: new Number(),
+    uid: new Number(),
+
   },
   handleOpen() {
     this.setData({
@@ -56,6 +62,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that= this
+    util.request({
+      url: util.baseUrl+"/user_weichat.php/Friend/friend",
+      methods:"GET",
+      success(res){
+        console.log(res)
+        if (res.data.status==200){
+          console.log(res.data.data)
+          that.setData({
+            grandson: res.data.data.grandson_qty,
+            son: res.data.data.son_qty,
+            uid: res.data.data.uid
+          })
+        }
+      }
+    })
 
   },
 
@@ -98,13 +120,18 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      path: '/pages/user/mune/firends/firends?uid=' + this.data.uid,
+      success: function (res) {
+        console.log(path)
+      }
+    }
   }
 })
