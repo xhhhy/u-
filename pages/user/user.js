@@ -48,7 +48,7 @@ Page({
         address: "mytask"
 
     }, {
-        image: "/static/image/快捷入口_常见问题.png",
+        image: "/static/image/problem.png",
       name: "帮助中心",
         address: "help"
 
