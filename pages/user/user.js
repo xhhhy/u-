@@ -13,7 +13,7 @@ Page({
       address: "myenroll"
 
     }, {
-      image: "/static/image/电脑管家.lnk.png",
+      image: "/static/image/lnk.png",
       name: "我的面试",
         address: "myview"
 
@@ -58,7 +58,7 @@ Page({
         address: "callme"
 
     }, {
-        image: "/static/image/emi关于我们.png",
+        image: "/static/image/emi.png",
         name: "关于我们",
         address: "about"
 

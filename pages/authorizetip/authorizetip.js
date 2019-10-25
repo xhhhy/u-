@@ -21,7 +21,7 @@ Page({
                         });
                         //尝试再次登录
                         wx.reLaunch({
-                            url: '/pages/index/index'
+                            url: '/pages/test/test'
                         })
                         app.userAuthCb();
                     } else {

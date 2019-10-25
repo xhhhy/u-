@@ -1,6 +1,6 @@
 // pages/test/test.js
 const util = require('../../utils/util.js')
-
+const app = getApp()
 Page({
 
   /**
@@ -8,36 +8,61 @@ Page({
    */
   
   data: {
-
+    title:"点击发送",
+    verify:new Number()
   },
-
 
   formSubmit(e){
-    let token = wx.getStorageSync('token');
-    let openid = wx.getStorageSync('openid');
-    let uid = wx.getStorageSync('uid');
-    wx.request({
-      url: 'http://recruit-local.com/user_weichat.php/Position/apply',
-      hearder: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        'token': token,
-        'uid': uid,
-        'openid': openid
-      },
-      data: e.detail.value,
-      method: 'POST',
-      success: function (res) {
-        console.log(res)
-        
-      }
-    })
+      console.log(e)
+  },
+   changetitle(){
+     this.changenum()
+   },
+   changenum(){
+     let num = 3
+      let myVar = setInterval(() => {
+       if (num == 0) {
+         this.setData({
+           title: "重新发送"
+         })
+         clearInterval(myVar)
+        return false
+       } else {
+        // num--
+         this.setData({
+           title: num--+'后重新发送'
+         })
+       }
+     }, 1000)
+   },
+  changeVerify(){
+    this.verification()
   },
 
+  verification(){
+    let that = this
+    util.request(
+      {
+        url: util.baseUrl + "/user_weichat.php/Verify/getVerify",
+        method: "GET",
+        success: function (res) {
+          console.log(res)
+          if (res.data.status == 200) {
+            console.log(res.data.verify)
+            console.log(res)
+            that.setData({
+              verify: res.data.verify
+            })
+          }
+        }
+      }
+    )
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.verification()
   },
 
   /**

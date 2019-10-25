@@ -10,7 +10,6 @@ App({
   onLaunch: function (opt) {
     this.getUserInfo()
     this.shareInfo(opt)
-
   },
    shareInfo(opt){
      //console.log(opt)

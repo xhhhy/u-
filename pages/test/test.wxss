@@ -1,1 +1,37 @@
 /* pages/test/test.wxss */
+.head{
+  height: 240px;
+  background-size: 20px 240px;
+}
+.verify{
+  background-color: #3d94f3;
+  color: white;
+  text-align: center;
+  margin-top: 20rpx;
+  padding-top: 2px ;
+  padding-bottom: 2px; 
+
+}
+.tijiao{
+  width: 80%;
+  border-radius: 20px;
+  background-color: #3f9bf8;
+  color: white;
+}
+.submitform{
+  width: 90%;
+  border-radius: 10px;
+  margin: 0 auto;
+  /* border: 2px solid #c2d6ff; */
+  background-color: #fff;
+  margin-top: -40px;
+  box-shadow: 0 0 15px #cbdcff;
+  padding:20px 0;
+}
+.form{
+  width: 80%;
+  margin: 25px auto 20px
+}
+.input{
+  margin-bottom: 20px;
+}
